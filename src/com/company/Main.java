@@ -19,7 +19,7 @@ public class Main {
 //        ArrayList<Contact> contacts = new ArrayList<>();
         ContactService contactService = new ContactService();
         int choice;
-        boolean check = false;
+//        boolean check = false;
         try {
             do {
                 menu_user();
@@ -113,7 +113,7 @@ public class Main {
                         System.exit(8);
                 }
 
-            } while (!check);
+            } while (choice <= 8 && choice >=1);
         } catch (
                 InputMismatchException | IOException e) {
             System.out.println("Input mismatch exception");
