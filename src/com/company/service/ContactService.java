@@ -10,10 +10,10 @@ import java.util.List;
 import static com.company.file.Path.PATH_FILE_CONTACT;
 
 public class ContactService implements GeneralService<Contact> {
-    private List<Contact> contacts;
+    private List<Contact> contacts = new ArrayList<>();
 
-    public ContactService(List<Contact> contacts) {
-        this.contacts = contacts;
+    public ContactService() throws IOException {
+        this.contacts = ContactIO.readFromFile(PATH_FILE_CONTACT);
     }
 
     public List<Contact> getContacts() {
@@ -55,6 +55,8 @@ public class ContactService implements GeneralService<Contact> {
 
     @Override
     public void display() {
+        System.out.printf("|%-20s|%-20s|%-20s|%-20s|%-20s|%-20s|%-20s","Phone Number","Group","Name","Gender","Address","Date Of Birth", "Email");
+        System.out.println();
         for (Contact contact : contacts) {
             System.out.println(contact);
         }

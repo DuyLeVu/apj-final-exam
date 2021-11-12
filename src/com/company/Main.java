@@ -15,9 +15,9 @@ import static com.company.file.Path.PATH_FILE_CONTACT;
 public class Main {
     public static final Scanner SCANNER = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        ArrayList<Contact> contacts = new ArrayList<>();
-        ContactService contactService = new ContactService(contacts);
+    public static void main(String[] args) throws IOException {
+//        ArrayList<Contact> contacts = new ArrayList<>();
+        ContactService contactService = new ContactService();
         int choice;
         boolean check = false;
         try {

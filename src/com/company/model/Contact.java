@@ -83,14 +83,6 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contact{" +
-                "phoneNumber=" + phoneNumber +
-                ", groupContact='" + groupContact + '\'' +
-                ", name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
-                ", address='" + address + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return String.format("|%-20s|%-20s|%-20s|%-20s|%-20s|%-20s|%-20s", getPhoneNumber(), getGroupContact(), getName(), getGender(), getAddress(), getDateOfBirth(), getEmail());
     }
 }
